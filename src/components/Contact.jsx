@@ -33,7 +33,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    console.log(import.meta.env.process.PUBLIC_API);
+    console.log(import.meta.process.env.PUBLIC_API);
     emailjs
       .send(
         import.meta.process.env.SERVICE_API,
