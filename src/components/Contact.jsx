@@ -32,7 +32,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-
+    console.log(process.env.PUBLIC_API);
     emailjs
       .send(
         process.env.SERVICE_API,
