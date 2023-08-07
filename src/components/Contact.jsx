@@ -33,11 +33,11 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    console.log(import.meta.process.env.PUBLIC_API);
+    console.log(import.meta.env.PUBLIC_API);
     emailjs
       .send(
-        import.meta.process.env.SERVICE_API,
-       import.meta.process.env.TEMPLATE_API,
+        import.meta.env.SERVICE_API,
+       import.meta.env.TEMPLATE_API,
         {
           from_name: form.name,
           to_name: "Ayush",
@@ -45,7 +45,7 @@ const Contact = () => {
           to_email: "ayushag.cse@gmail.com",
           message: form.message,
         },
-        import.meta.process.env.PUBLIC_API
+        import.meta.env.PUBLIC_API
       )
       .then(
         () => {
