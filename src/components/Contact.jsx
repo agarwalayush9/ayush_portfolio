@@ -36,8 +36,8 @@ const Contact = () => {
     console.log(import.meta.env.PUBLIC_API);
     emailjs
       .send(
-        import.meta.env.SERVICE_API,
-       import.meta.env.TEMPLATE_API,
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Ayush",
@@ -45,7 +45,7 @@ const Contact = () => {
           to_email: "ayushag.cse@gmail.com",
           message: form.message,
         },
-        import.meta.env.PUBLIC_API
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
