@@ -9,7 +9,7 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import 'dotenv/config';
-// require('dotenv').config();
+require('dotenv').config();
 
 const Contact = () => {
   const formRef = useRef();
